@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
 
+const PORT = process.env.PORT || 3000;
 let resArr=["","","","",""]
 let toWin="JERRY"
 app.get("/wordle/:guess", (req, res) => {
@@ -46,4 +47,4 @@ app.get("/wordle/:guess", (req, res) => {
 })
 
 app.use(express.static("public"));
-app.listen(3000)
+app.listen(PORT)
